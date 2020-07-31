@@ -1,7 +1,7 @@
 # A rainbow by python
 
-import turtle
 import time
+from turtle import Turtle, Screen
 from termcolor import colored
 
 colors = ['red', 'yellow', 'green', 'cyan', 'blue', 'magenta']
@@ -20,14 +20,16 @@ for n in range(len(colors)):
 # Drawing with turtle
 def draw():
     colors = ['red', 'yellow', 'green', 'cyan', 'blue', 'magenta']
-    turtle.pensize(5)
-    turtle.bgcolor('black')
-    turtle.speed(1000)
+    turtle = Turtle()
+    screen = Screen()
+    turtle.pensize(7)
+    screen.bgcolor('black')
+    turtle.speed(1200)
     for x in range(360):
         turtle.pencolor(colors[x % len(colors)])
         turtle.pensize(x/50)
         turtle.forward(x)
-        turtle.left(59)
+        turtle.left(57)
 
 draw()
 time.sleep(5)
